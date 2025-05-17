@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "mssql3": {
+      "restored": true,
+      "restoreTime": "2024-05-27T20:30:59.9911196Z"
+    }
+  },
+  "parameters": {
+    "St10242025-CLDV6221Part2.resourceGroupLocation": {
+      "Name": "St10242025-CLDV6221Part2.resourceGroupLocation",
+      "Type": null,
+      "Value": "southafricanorth"
+    },
+    "St10242025-CLDV6221Part2.subscriptionId": {
+      "Name": "St10242025-CLDV6221Part2.subscriptionId",
+      "Type": "subscription",
+      "Value": "e31273bf-0dae-4395-a8b5-33f801de7c65"
+    },
+    "St10242025-CLDV6221Part2.resourceGroupName": {
+      "Name": "St10242025-CLDV6221Part2.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "AZ-JHB-RSG-VCGPMD-ST10242025-TER"
+    },
+    "St10242025-CLDV6221Part2.resourceName": {
+      "Name": "St10242025-CLDV6221Part2.resourceName",
+      "Type": null,
+      "Value": "St10242025-CLDV6221Part2"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<KhumaloCraft2.Models.Product>
+
+@{
+    ViewData["Title"] = "Product Index";
+}
+
+<h2>Manage products using CRUD operations</h2>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img class="card-img-top" src="/images/@item.ImageFileName" alt="@item.ProdName" />
+                <div class="card-body">
+                    <h5 class="card-title">@item.ProdName</h5>
+                    <p class="card-text">
+                        <strong>Artist:</strong> @item.Artist<br />
+                        <strong>Price:</strong> @item.Price<br />
+                        <strong>Description:</strong> @item.Description<br />
+                        <strong>Category:</strong> @item.Category.CatId<br />
+                        <strong>Quantity:</strong> @item.Quantity<br />
+                        <strong>Details:</strong> @item.Details
+                    </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <a class="btn btn-sm btn-outline-secondary" asp-action="Edit" asp-route-id="@item.id">Edit</a>
+                            <a class="btn btn-sm btn-outline-secondary" asp-action="Details" asp-route-id="@item.id">Details</a>
+                            <a class="btn btn-sm btn-outline-danger" asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

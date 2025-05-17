@@ -1,0 +1,53 @@
+﻿@model KhumaloCraft2.Models.ArtWork
+
+@{
+    ViewBag.Title = "ArtWork Details";
+
+}
+
+<div class="col">
+    <h3>Art work details</h3>
+</div>
+<input type="hidden" value="@Model.Id" 
+@*  ProdName = "Amandla",
+Category = "Painting",
+Price = 5302,
+Quantity = 3,
+Description = "A powerful painting capturing the essence of African struggle, with strong, expressive figures set against a stark, tumultuous backdrop. Earthy tones and bold strokes convey resilience and determination, while symbolic elements highlight the rich cultural heritage and enduring spirit of the people.",*@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card" style="width: 18rem;">
+            <img src="/images/@Model.ImageFileName" class="card-img-top" alt="Image of @Model?.ProdName">
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Name:</strong> @Model?.ProdName
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Artist:</strong> @Model?.Artist
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Category:</strong> @Model?.Type
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Availability:</strong> @Model?.Availability
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Price:</strong> R @Model?.Price?.ToString("N2")
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Quantity:</strong> @Model?.Quantity
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Description:</strong> @Model?.Description
+                    </li>
+                    <div class="list-group-item">
+                        <a class="btn btn-secondary ml-2" asp-action="List">Back to List</a>
+                        <a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Id" class="btn btn-primary">Add to Cart</a>                        
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
